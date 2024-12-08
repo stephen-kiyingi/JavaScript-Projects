@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="JS/ main.js"></script>
+        <script src="JS/main.js"></script>
     </head>
     <body>
-        <p>Riders must be at least 52 centimeters tall to ride.</p>
-        <input id="Height" value="0" />
-        <button onclick="Ride_function()">click here</button>
-        <p id="Ride"></p>
+        <h>GLOBAL VARIABLES</h>
+        <p id="demo" onclick="g_variable()">Return</p> 
+        <p id="demo1" onclick="g_variable1()">Return1</p>
 
-        <button onclick="myFunction()">Click here.</button>
-        <p id="Keywords_and_Constructors"></p>
+        <h>LOCAL VARIABLES</h>
+        <p id="demo2" onclick="l_variable()">Return2</p>
+        <p id="demo3" onclick="l_variable1()">Return3</p>
 
-        <button onclick="myphone()">Show Phone Details</button>
-        <p id="New_and_This"></p>
+        <h>CONSOLE LOG METHOD</h>
+        <p id="demo4" onclick="c_variable()">log</p>
+        <p id="demo5" onclick="c_variable1()">log1</p>
 
-        <p id="Nested_function" onclick="add_Function()">Nested Function = </p>
+        <h>IF STATEMENT</h>
+        <p id="greeting" onclick="get_Date()">Click Here</p>
+        <p id="w_hours" onclick="bar_opens()">Find out</p>
+
+        <h>ELSE STATEMENT</h>
+        <p>Enter your age:</p>
+        <input id="Age" value="" />
+        <p id="How_old_are_you?"></p>
+        <button onclick="drink_function()">Enter Here</button>
+        <p id="Time_of_day"></p>
+        <button onclick="Time_function()">Click here to get the time.</button>
+
     </body>
-</html>    
+</html>

@@ -1,101 +1,66 @@
-document.write("ten" + 5);
-document.write("<br>"); // type of coercion.
+var x = 20
+function g_variable () {
+    document.write(10 + x + "<br>");
+}
+function g_variable1 () {
+    document.write(x + 30);
+}
+//using global variable
 
-//using infinity
-function my_function() {
-    var x = (1E310);
-    document.getElementById("infinity").innerHTML = x;
+function l_variable () {
+    var y = 20;
+    document.write(30 - y + "<br>");
 }
+function l_variable1 () {
+    document.write(y-10);
+}
+//using local variable
 
-//using negative infinity
-function infinity() {
-    var Y = (-1E310);
-    document.getElementById("-infinity").innerHTML = Y;
+function c_variable () {
+    var z = 10
+    console.log(15 + z)
 }
+function c_variable1 () {
+    console.log(z + 10)
+}
+//using console.log
 
-function greater() {
-    var z = (20>2);
-    document.getElementById("boolean").innerHTML = z;
+function get_Date() {
+    if(new Date() . getHours() < 18) {
+     document.getElementById("greeting").innerHTML = "How are you today?";   
+    }
 }
+// if statement
 
-function less() {
-    var a = (20<2);
-    document.getElementById("lean").innerHTML = a;
+function bar_opens() {
+    if(new Date() . getHours() < 21) {
+     document.getElementById("w_hours").innerHTML = "is the bar open for service?";
+    }
 }
-//math operation using console 
-console.log(4 + 4);
+function drink_function() {
+    Age = document.getElementById("Age").value;
+    if (Age >= 21) {
+        Drink = "You are old enough to drink!";
+    }
+    else  {
+        Drink = "You are not old enough to drink!";
+    }
+    document.getElementById("How_old_are_you?").innerHTML = Drink;
+}
+// else statement
 
-//using == operator
-function equal_sign() {
-    var b = (4 == 2);
-document.getElementById("equal").innerHTML = b;
+function Time_function() {
+    var Time = new Date() . getHours();
+    var Reply;
+    if (Time < 12 == Time > 0) {
+        Reply = "it is morning time!";
+    }
+    else if (Time >= 12 == Time < 18) {
+        Reply = "it is afternoon.";
+    }
+    else {
+        Reply = "it is evening time.";
+    }
+    document.getElementById("Time_of_day").innerHTML = Reply;
 }
-
-function my_equal() {
-    var c = (4 == 4);
-    document.getElementById("equation").innerHTML = c;
-}
-
-//using the  === operator
-function tripple_equal() {
-    var d1 = 2;
-    var d2 = 2;
-    var result = (d1 === d2);
-    document.getElementById("t_equal").innerHTML = result;    
-}
-
-function triple_equal() {
-    var e = 3;
-    var f = 4;
-    var result = (e === f);
-    document.getElementById("triple").innerHTML = result;
-}
-function my_function1() {
-    var g = 3;
-    var h = "3";
-    var result = (g === h);
-    document.getElementById("demo").innerHTML = result;
-}
-
-function my_function2() {
-    var c1 = 3;
-    var c2 = 4;
-    var result = (c1 === c2);
-    document.getElementById("demo1").innerHTML = result;
-}
-//using AND operator
-function add() {
-    var c3 = (10>4 && 4>10);
-    document.getElementById("demo2").innerHTML= c3;
-} 
-
-function add1() {
-    var c4 = (4<10 && 10<20);
-    document.getElementById("demo3").innerHTML = c4;
-}
-//using OR operator
-function or() {
-    var c5 = (2>4 || 10>4);
-    document.getElementById("demo4").innerHTML = c5;
-}
-
-function or1() {
-    var c6 = (5>10 || 10>20);
-    document.getElementById("demo5").innerHTML = c6;
-}
-//using NOT operator
-function not() {
-    var n = !(30 > 20);
-    document.getElementById("demo6").innerHTML = n;
-}
-
-function not1() {  
-    var n1 = !(20 > 30);
-    document.getElementById("demo7").innerHTML = n1;
-}
-
-//variable with a boolean data type
-
-var m = true;
-document.write(typeof m);
-document.write("<br>");
+// else if statement
