@@ -1,66 +1,23 @@
-var x = 20
-function g_variable () {
-    document.write(10 + x + "<br>");
+function my_concat() {
+    var sentence_1 = "I have a dream";
+    var sentence_2 = " to become a software developer";
+    var whole_sentence = sentence_1.concat(sentence_2);
+    document.getElementById("concatenate").innerHTML = whole_sentence;
 }
-function g_variable1 () {
-    document.write(x + 30);
+//using concat method
+function my_slice() {
+    var sentence = "Never judge a book by its cover.";
+    var part = sentence.slice(10,20);
+    document.getElementById("slice").innerHTML = part;
 }
-//using global variable
-
-function l_variable () {
-    var y = 20;
-    document.write(30 - y + "<br>");
+//using slice method
+function string_method() {
+    var y =1989;
+    document.getElementById("Numbers_to_string").innerHTML = y.toString();
 }
-function l_variable1 () {
-    document.write(y-10);
+//using tostring method
+function precision_method() {
+ var z = 1.9892000;
+ document.getElementById("precision").innerHTML = z.toPrecision(2);  
 }
-//using local variable
-
-function c_variable () {
-    var z = 10
-    console.log(15 + z)
-}
-function c_variable1 () {
-    console.log(z + 10)
-}
-//using console.log
-
-function get_Date() {
-    if(new Date() . getHours() < 18) {
-     document.getElementById("greeting").innerHTML = "How are you today?";   
-    }
-}
-// if statement
-
-function bar_opens() {
-    if(new Date() . getHours() < 21) {
-     document.getElementById("w_hours").innerHTML = "is the bar open for service?";
-    }
-}
-function drink_function() {
-    Age = document.getElementById("Age").value;
-    if (Age >= 21) {
-        Drink = "You are old enough to drink!";
-    }
-    else  {
-        Drink = "You are not old enough to drink!";
-    }
-    document.getElementById("How_old_are_you?").innerHTML = Drink;
-}
-// else statement
-
-function Time_function() {
-    var Time = new Date() . getHours();
-    var Reply;
-    if (Time < 12 == Time > 0) {
-        Reply = "it is morning time!";
-    }
-    else if (Time >= 12 == Time < 18) {
-        Reply = "it is afternoon.";
-    }
-    else {
-        Reply = "it is evening time.";
-    }
-    document.getElementById("Time_of_day").innerHTML = Reply;
-}
-// else if statement
+//using toprecision method
