@@ -1,23 +1,44 @@
-function my_concat() {
-    var sentence_1 = "I have a dream";
-    var sentence_2 = " to become a software developer";
-    var whole_sentence = sentence_1.concat(sentence_2);
-    document.getElementById("concatenate").innerHTML = whole_sentence;
+function countdown() {
+    var seconds = document.getElementById("seconds").value;
+
+    function tick() {
+        seconds = seconds - 1;
+        timer.innerHTML = seconds;
+        var time = setTimeout(tick, 1000);
+        if (seconds == -1) {
+            alert("Time's up !");
+            clearTimeout(time);
+            timer.innerHTML = "";
+        }
+    }
+    tick()
 }
-//using concat method
-function my_slice() {
-    var sentence = "Never judge a book by its cover.";
-    var part = sentence.slice(10,20);
-    document.getElementById("slice").innerHTML = part;
+
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+//Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
 }
-//using slice method
-function string_method() {
-    var y =1989;
-    document.getElementById("Numbers_to_string").innerHTML = y.toString();
+
+//Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
 }
-//using tostring method
-function precision_method() {
- var z = 1.9892000;
- document.getElementById("precision").innerHTML = z.toPrecision(2);  
-}
-//using toprecision method
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";        
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace("active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += "active";
+} 
