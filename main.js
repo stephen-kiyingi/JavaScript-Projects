@@ -1,44 +1,56 @@
-function countdown() {
-    var seconds = document.getElementById("seconds").value;
+function Call_Loop() {
+var loop = 1;
+var output = ''; // string to accumulate the loop output
 
-    function tick() {
-        seconds = seconds - 1;
-        timer.innerHTML = seconds;
-        var time = setTimeout(tick, 1000);
-        if (seconds == -1) {
-            alert("Time's up !");
-            clearTimeout(time);
-            timer.innerHTML = "";
-        }
-    }
-    tick()
+while (loop <= 6) {
+    output += loop + "<br>";  // concatenate the current loop value and a line break
+    loop++; // increment the loop counter
 }
-
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-//Next/previous controls
-function plusSlides(n) {
-    showSlides(slideIndex += n);
+document.getElementById("Loop").innerHTML = output;
 }
-
-//Thumbnail image controls
-function currentSlide(n) {
-    showSlides(slideIndex = n);
+// a function using a for loop
+var Instruments = ["Guitar", "Drums", "Piano", "Bass"];
+var Content = "";
+var Y;
+function for_Loop() {
+    for (Y = 0; Y < Instruments.length; Y++) {
+        Content += Instruments[Y] + "<br>";
+    }
+    document.getElementById("List_of_Instruments").innerHTML = Content;
 }
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";        
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace("active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += "active";
+// a function with an array
+function array_function() {
+    var array_f = [];
+    array_f[0] = "sleeping";
+    array_f[1] = "playing";
+    array_f[2] = "eating";
+    document.getElementById ("Array").innerHTML = "Array_f is displaying " + array_f[1] + " ";
+
+}
+// a function using constant
+function constant_function() {
+    const vehicle = {type:"honda", brand:"civic", color:"silver"};
+    vehicle.color = "silver";
+    vehicle.price = "$30000";
+    document.getElementById("constant").innerHTML = "The cost of the " + 
+     vehicle.type  +  " was "  +  vehicle.price;
 } 
+// using let keyword
+function let_function() {
+var z = 24;
+document.write(z);
+{
+    let z = 36;
+    document.write("<br>" + z);
+}
+}
+// creating an object with the let keyword 
+let watch = {
+    make: " apple ",
+    model: " series 8 ",
+    year: " 2024 ",
+    description: function() {
+        return " The watch is a " + this.year + this.color + this.model;
+    }
+    };
+document.getElementById("watch_object").innerHTML = watch.description();
