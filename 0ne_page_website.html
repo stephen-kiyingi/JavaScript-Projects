@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang= "en">
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<title>Visit Uganda</title>
+
+	    <link rel="stylesheet" type= "text/css" href="One_page_website.css">
+		<script src="/Users/stephen/Documents/GitHub/HTML-AND-CSS/HTML-AND-CSS/One-Page Website/CSS/JS/One_Page_Website.js"></script>
+
+	</head>
+
+	<body>
+
+	<!-- NAV -->
+
+	<div class="wrap">
+		<div class="menu-container">
+			<ul class="menu">
+				<a href="#home"><li>HOME</li></a>
+				<a href="#gallery"><li>GALLERY</li></a>
+				<a href="#contact"><li>RESERVATION</li></a>
+			</ul>
+		</div>
+	</div>
+
+	<!--END NAV-->
+
+	<!-- HOME -->
+
+	<div id="home">
+
+		<div>
+			<div>
+				<span><h1>VISIT UGANDA</h1></span>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!--END HOME -->
+
+	<p class="paragraph">Uganda is home to some of the world's greatest primate tracking, situated against a string of rolling hills, forest canopies and majestic mountain gorillas, its no wonder that most wildlife enthusiasts come to Uganda to track and spend time with these critically endangered primates up-close.</p>
+
+	<!-- GALLERY -->
+
+	<section>
+		<div id="gallery">
+
+		<h1>Gallery</h1>
+
+		<div>
+
+			<!-- PHOTO CONTAINER 1 -->
+
+		
+			<div class="row">
+				<div class="column">
+					<img src="gorilla.avif" alt="image of gorilla" width="300" height="300" onclick="openModal();currentSlide(1)">
+				</div>
+			</div>
+
+			<!-- END PHOTO CONTAINER 1 -->
+
+			<!--The Modal/Lightbox-->
+			<div id="myModal" class="modal">
+				<span class="close cursor" onclick="closeModal()">&times;</span>
+				<img class="modal-content" id="img01">
+				<div class="caption" id="caption"></div>
+			</div>
+
+			<!-- VIDEO CONTAINER 1 -->
+
+			<div>
+				<div>
+
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/FqcCzw1tF3k?si=_te_gRPv3FGgj3Ug&amp;start=22" title="YouTube video player" 
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+	</section>
+
+	<!-- END GALLERY -->
+
+	<!-- RSVP -->
+
+	<section>
+
+		<div id="contact">
+
+			<div>
+                </h1>RESERVATIONS</h1>
+
+            </div>
+
+				<h2><span>Discover the pearl of Africa.</span>
+
+				<br/>Reserve your flight today!
+
+				</h2>
+
+			<p class="rsvp-text">
+				please provide us with your basic contact information.
+			</p>
+			<div class="form-rsvp">
+				<form action= ""method= "post">
+					<input class="rsvp" type="text" value="" placeholder="First Name">
+					<input class="rsvp" type="text" value="" placeholder="Last Name">
+					<input class="rsvp" type="text" value="" placeholder="Email Address">
+					<input class="rsvp" type="text" value="" Placeholder="Mobile Number">
+					<div class="form-spacer">
+                        
+						<label class="terms">Terms and conditions</label>
+			        </div>
+                    <div class="submit">
+
+				        <input type="submit" value="submit">
+                    </div>
+                </form>    
+            </div>
+
+		</div>
+
+     </div>
+
+    </section>
+
+<!-- RSVP -->
+
+<!-- FOOTER -->
+
+<div id="footer">
+
+	www.Visituganda.com &nbsp;| &nbsp; &copy; 2018
+
+</div>
+
+<!-- END FOOTER -->
+
+</body>
+
+</html>
+
+
+
